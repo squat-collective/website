@@ -16,7 +16,13 @@ export const metadata: Metadata = {
   title: "Le Squat | Builders Collective",
   description:
     "A band of engineers who live and breathe problem-solving. We build things together, like street artists of code.",
-  keywords: ["developers", "engineers", "collective", "builders", "open source"],
+  keywords: [
+    "developers",
+    "engineers",
+    "collective",
+    "builders",
+    "open source",
+  ],
   openGraph: {
     title: "Le Squat | Builders Collective",
     description: "A band of engineers who live and breathe problem-solving.",
