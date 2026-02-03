@@ -1,7 +1,6 @@
-# Use with: podman-compose up
-# Or: podman compose up (with podman-compose plugin)
+# Dev server: podman compose up
 services:
-  app:
+  dev:
     image: docker.io/oven/bun:1-debian
     ports:
       - "3000:3000"
