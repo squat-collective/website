@@ -1,0 +1,18 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/app/src:delegated
+      - ./public:/app/public:delegated
+      - ./next.config.ts:/app/next.config.ts:ro
+      - ./tsconfig.json:/app/tsconfig.json:ro
+      - ./postcss.config.mjs:/app/postcss.config.mjs:ro
+      - ./eslint.config.mjs:/app/eslint.config.mjs:ro
+    environment:
+      - NODE_ENV=development
+      - WATCHPACK_POLLING=true
+      - NEXT_TELEMETRY_DISABLED=1
