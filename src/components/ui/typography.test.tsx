@@ -1,5 +1,5 @@
-import { render, screen } from "@testing-library/react";
 import { describe, expect, test } from "bun:test";
+import { render, screen } from "@testing-library/react";
 import { CodeText, Heading, Highlight, Text } from "./typography";
 
 describe("Heading", () => {
@@ -114,7 +114,7 @@ describe("CodeText", () => {
     render(
       <span data-testid="wrapper">
         <CodeText>test</CodeText>
-      </span>,
+      </span>
     );
     const wrapper = screen.getByTestId("wrapper").firstElementChild;
     expect(wrapper?.className).toContain("font-mono");

@@ -1,5 +1,5 @@
-import { render, screen } from "@testing-library/react";
 import { describe, expect, test } from "bun:test";
+import { render, screen } from "@testing-library/react";
 import { Button, ButtonLink } from "./button";
 
 describe("Button", () => {
@@ -79,7 +79,7 @@ describe("ButtonLink", () => {
     render(
       <ButtonLink href="https://example.com" external>
         External
-      </ButtonLink>,
+      </ButtonLink>
     );
     const link = screen.getByRole("link");
     expect(link.getAttribute("target")).toBe("_blank");
@@ -96,7 +96,7 @@ describe("ButtonLink", () => {
     render(
       <ButtonLink href="/test" variant="secondary" size="lg">
         Styled
-      </ButtonLink>,
+      </ButtonLink>
     );
     const link = screen.getByRole("link");
     expect(link.className).toContain("border-zinc-700");

@@ -111,8 +111,7 @@ export default function Home() {
             {"// House Rules"}
           </Heading>
           <Heading as="h3" variant="title" className="mb-12">
-            The only rules of{" "}
-            <Highlight>the squat</Highlight>
+            The only rules of <Highlight>the squat</Highlight>
           </Heading>
 
           <div className="grid gap-6 md:grid-cols-2">

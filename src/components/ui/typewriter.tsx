@@ -40,10 +40,10 @@ export function Typewriter({
         setText(
           isDeleting
             ? current.substring(0, text.length - 1)
-            : current.substring(0, text.length + 1),
+            : current.substring(0, text.length + 1)
         );
       },
-      isDeleting ? deletingSpeed : typingSpeed,
+      isDeleting ? deletingSpeed : typingSpeed
     );
 
     return () => clearTimeout(timeout);

@@ -1,5 +1,5 @@
-import { render, screen } from "@testing-library/react";
 import { describe, expect, test } from "bun:test";
+import { render, screen } from "@testing-library/react";
 import {
   Card,
   CardContent,
@@ -24,7 +24,7 @@ describe("Card", () => {
     render(
       <Card variant="bordered" data-testid="card">
         Test
-      </Card>,
+      </Card>
     );
     const card = screen.getByTestId("card");
     expect(card.className).toContain("border");
@@ -35,7 +35,7 @@ describe("Card", () => {
     render(
       <Card variant="sticker" data-testid="card">
         Test
-      </Card>,
+      </Card>
     );
     const card = screen.getByTestId("card");
     expect(card.className).toContain("rotate-");
@@ -45,7 +45,7 @@ describe("Card", () => {
     render(
       <Card variant="spray" data-testid="card">
         Test
-      </Card>,
+      </Card>
     );
     const card = screen.getByTestId("card");
     expect(card.className).toContain("relative");
@@ -55,7 +55,7 @@ describe("Card", () => {
     render(
       <Card className="custom" data-testid="card">
         Test
-      </Card>,
+      </Card>
     );
     const card = screen.getByTestId("card");
     expect(card.className).toContain("custom");
@@ -67,7 +67,7 @@ describe("CardHeader", () => {
     render(
       <CardHeader>
         <span>Header</span>
-      </CardHeader>,
+      </CardHeader>
     );
     const header = screen.getByText("Header").parentElement;
     expect(header?.className).toContain("mb-4");
@@ -114,7 +114,7 @@ describe("CardContent", () => {
     render(
       <CardContent className="my-content">
         <span>Test</span>
-      </CardContent>,
+      </CardContent>
     );
     const content = screen.getByText("Test").parentElement;
     expect(content?.className).toContain("my-content");

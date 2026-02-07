@@ -1,5 +1,5 @@
-import { render, screen } from "@testing-library/react";
 import { describe, expect, test } from "bun:test";
+import { render, screen } from "@testing-library/react";
 import { Badge, NumberBadge } from "./badge";
 
 describe("Badge", () => {
@@ -27,7 +27,7 @@ describe("Badge", () => {
     render(
       <Badge variant="outline" data-testid="badge">
         Outline
-      </Badge>,
+      </Badge>
     );
     const badge = screen.getByTestId("badge");
     expect(badge.className).toContain("border");
@@ -38,7 +38,7 @@ describe("Badge", () => {
     render(
       <Badge variant="stencil" data-testid="badge">
         Stencil
-      </Badge>,
+      </Badge>
     );
     const badge = screen.getByTestId("badge");
     expect(badge.className).toContain("skew-x-");
@@ -49,7 +49,7 @@ describe("Badge", () => {
     render(
       <Badge variant="drip" data-testid="badge">
         Drip
-      </Badge>,
+      </Badge>
     );
     const badge = screen.getByTestId("badge");
     expect(badge.className).toContain("bg-accent");
@@ -60,7 +60,7 @@ describe("Badge", () => {
     render(
       <Badge className="extra" data-testid="badge">
         Test
-      </Badge>,
+      </Badge>
     );
     const badge = screen.getByTestId("badge");
     expect(badge.className).toContain("extra");
@@ -87,7 +87,7 @@ describe("NumberBadge", () => {
     render(
       <span data-testid="wrapper">
         <NumberBadge number={1} />
-      </span>,
+      </span>
     );
     const badge = screen.getByTestId("wrapper").firstElementChild;
     expect(badge?.className).toContain("font-mono");
