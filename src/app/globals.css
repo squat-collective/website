@@ -18,6 +18,11 @@
   --font-mono: var(--font-geist-mono);
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -123,8 +128,7 @@ body {
 
 /* Neon glow */
 .neon-glow {
-  text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 20px
-    currentColor, 0 0 40px currentColor;
+  text-shadow: 0 0 8px rgba(255, 62, 0, 0.15);
 }
 
 /* Stencil effect */

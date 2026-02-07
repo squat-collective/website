@@ -9,11 +9,11 @@ import {
   ButtonLink,
   Card,
   CardContent,
-  CodeText,
   Heading,
   Highlight,
   NumberBadge,
   Text,
+  Typewriter,
 } from "@/components/ui";
 
 export default function Home() {
@@ -34,7 +34,7 @@ export default function Home() {
           {/* Tag line above */}
           <div className="mb-6 inline-block">
             <span className="bg-accent/20 text-accent px-4 py-2 font-mono text-sm uppercase tracking-widest border-l-4 border-accent">
-              Est. 2024 • Builders Only
+              If you know, you know
             </span>
           </div>
 
@@ -44,16 +44,32 @@ export default function Home() {
           </Heading>
 
           {/* Tagline */}
-          <div className="mb-8">
-            <CodeText>builders collective</CodeText>
+          <div className="mb-8 text-lg md:text-xl min-h-[3.5rem] md:min-h-[2rem] flex items-center justify-center">
+            <Typewriter
+              sentences={[
+                "the underground builders club",
+                "bring code, bring beer, bring ideas",
+                "location shared by word of mouth only",
+                "no flyers, no linkedin, just vibes",
+                "your worst idea? pitch it, we're in",
+                "where side projects become the main event",
+                "open bar, open source, open doors",
+                "the after-party is a deploy",
+                "we don't network, we just show up",
+                "somewhere between a hackathon and a rave",
+              ]}
+              typingSpeed={60}
+              deletingSpeed={30}
+              pauseDuration={2500}
+            />
           </div>
 
           {/* Description */}
           <Text variant="lead" muted className="mx-auto mb-12 max-w-2xl">
-            We&apos;re a band of engineers who live and breathe problem-solving.
-            Building things together—like{" "}
-            <Highlight color="secondary">street artists of code</Highlight>. No
-            permission needed, just ship it.
+            An underground collective of builders. We meet, we code, we drink
+            beers, we ship things nobody asked for.{" "}
+            <Highlight color="secondary">The door&apos;s unlocked</Highlight>
+            —just walk in.
           </Text>
 
           {/* CTA Buttons */}
@@ -75,7 +91,7 @@ export default function Home() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block">
           <div className="flex flex-col items-center gap-2 text-zinc-600">
             <span className="font-mono text-xs uppercase tracking-widest">
               Scroll
@@ -92,36 +108,36 @@ export default function Home() {
       >
         <div className="mx-auto max-w-5xl">
           <Heading as="h2" variant="tag" className="mb-4">
-            {"// Our Manifesto"}
+            {"// House Rules"}
           </Heading>
           <Heading as="h3" variant="title" className="mb-12">
-            The rules we <Highlight>break</Highlight> and{" "}
-            <Highlight color="secondary">make</Highlight>
+            The only rules of{" "}
+            <Highlight>the squat</Highlight>
           </Heading>
 
           <div className="grid gap-6 md:grid-cols-2">
             <ManifestoCard
               number="01"
-              title="Build First, Ask Later"
-              description="We don't wait for permission. If it can be built, we build it. Ideas are worthless without execution."
-              icon={<BoltIcon size={24} />}
-            />
-            <ManifestoCard
-              number="02"
-              title="Open Source Everything"
-              description="Our code lives in the open. We share, we learn, we grow together. No gatekeeping allowed."
-              icon={<CodeIcon size={24} />}
-            />
-            <ManifestoCard
-              number="03"
-              title="Ship or GTFO"
-              description="Perfect is the enemy of shipped. Launch it, break it, fix it, repeat. Move fast and make things."
+              title="BYOB — Bring Your Own Build"
+              description="Show up with a half-baked idea and a six-pack. We'll figure out the rest. The best projects start on napkins and end at 4AM."
               icon={<SprayIcon size={24} />}
             />
             <ManifestoCard
+              number="02"
+              title="No Guest List"
+              description="No invites needed. No cliques. You heard about us, you showed up, you're family. First round's on whoever shipped last."
+              icon={<BoltIcon size={24} />}
+            />
+            <ManifestoCard
+              number="03"
+              title="Pass The Aux"
+              description="Everyone gets a turn. Your stupid bot idea gets the same energy as someone's serious infra project. We don't rank, we riff."
+              icon={<CodeIcon size={24} />}
+            />
+            <ManifestoCard
               number="04"
-              title="No Hierarchy, Just Hustle"
-              description="Everyone codes. Everyone ships. Your commit history is your resume. Contribute or step aside."
+              title="Leave It Better"
+              description="Fix a bug, share a trick, teach someone something. Take a beer from the fridge, leave one for the next person. That's the deal."
               icon={<GitHubIcon size={24} />}
             />
           </div>
@@ -132,9 +148,9 @@ export default function Home() {
       <section className="border-t border-zinc-800 px-6 py-24 spray-texture">
         <div className="mx-auto max-w-5xl">
           <div className="grid gap-8 md:grid-cols-3">
-            <StatCard value="∞" label="Problems to solve" />
-            <StatCard value="0" label="Gatekeeping" />
-            <StatCard value="24/7" label="Building mode" highlight />
+            <StatCard value="∞" label="Beers shared" />
+            <StatCard value="0" label="Dress code" />
+            <StatCard value="24/7" label="Doors open" highlight />
           </div>
         </div>
       </section>
@@ -143,15 +159,16 @@ export default function Home() {
       <section className="border-t border-zinc-800 px-6 py-24">
         <div className="mx-auto max-w-3xl text-center">
           <Heading as="h2" variant="tag" className="mb-4">
-            {"// Join The Crew"}
+            {"// Pull Up"}
           </Heading>
           <Heading as="h3" variant="title" className="mb-6">
-            Ready to <span className="gradient-text">squat</span>?
+            Follow the bass to the{" "}
+            <span className="gradient-text glitch">source</span>
           </Heading>
           <Text variant="lead" muted className="mb-8">
-            Bring your ideas, your skills, or just your curiosity.
+            No application form. No interview. No secret handshake.
             <br />
-            No applications. Just start contributing.
+            Just show up, grab a beer, and start building.
           </Text>
           <ButtonLink
             href="https://github.com/squat-collective"
@@ -173,8 +190,8 @@ export default function Home() {
             © {new Date().getFullYear()} Le Squat. All rights open.
           </Text>
           <Text variant="mono" className="text-zinc-600">
-            Built with <span className="text-accent">♥</span> and too much
-            caffeine
+            No soundsystem was harmed <span className="text-accent">⌁</span>{" "}
+            just a few kegs
           </Text>
         </div>
       </footer>

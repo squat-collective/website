@@ -27,3 +27,6 @@ export type {
 
 export { Badge, NumberBadge } from "./badge";
 export type { BadgeProps, NumberBadgeProps } from "./badge";
+
+export { Typewriter } from "./typewriter";
+export type { TypewriterProps } from "./typewriter";
