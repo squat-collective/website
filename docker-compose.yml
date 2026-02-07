@@ -7,6 +7,9 @@ services:
     volumes:
       - ./:/app:Z
     working_dir: /app
+    env_file:
+      - path: .env.local
+        required: false
     environment:
       - NODE_ENV=development
       - NEXT_TELEMETRY_DISABLED=1

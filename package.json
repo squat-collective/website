@@ -20,9 +20,12 @@
   "devDependencies": {
     "@biomejs/biome": "^1.9",
     "@tailwindcss/postcss": "^4",
+    "@testing-library/dom": "^10",
+    "@testing-library/react": "^16",
     "@types/bun": "^1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "happy-dom": "^17",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

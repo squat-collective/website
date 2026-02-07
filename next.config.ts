@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
     unoptimized: true, // Required for static export
   },
   trailingSlash: true, // Better S3/CloudFront compatibility
+  allowedDevOrigins: process.env.ALLOWED_DEV_ORIGINS?.split(",") ?? [],
 };
 
 export default nextConfig;
